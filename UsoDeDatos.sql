@@ -1,6 +1,6 @@
 CREATE DATABASE Chistes;
 
-USE DATABASE Chistes;
+USE Chistes;
 
 CREATE TABLE Usuario(
 	UsuarioId int PRIMARY KEY,
