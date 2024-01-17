@@ -1,5 +1,7 @@
 CREATE DATABASE Chistes;
 
+USE DATABASE Chistes;
+
 CREATE TABLE Usuario(
 	UsuarioId int PRIMARY KEY,
 	Nombre nvarchar(50),
