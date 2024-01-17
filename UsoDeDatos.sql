@@ -1,6 +1,8 @@
+DROP DATABASE Chistes;
+
 CREATE DATABASE Chistes;
 
-USE Chistes;
+Use Chistes;
 
 CREATE TABLE Usuario(
 	UsuarioId int PRIMARY KEY,
@@ -113,31 +115,3 @@ INSERT INTO ChistesTematicas (ChisteID, TematicaID) VALUES
 (12, 1),
 (12, 2),
 (12, 3);
-
-SELECT ChisteID, Titulo, Cuerpo
-FROM Chiste
-WHERE AutorID = (SELECT UsuarioID FROM Usuario WHERE Nombre = 'Manolito');
-
-SELECT C.ChisteID, Titulo, Cuerpo
-FROM Chiste C
-INNER JOIN ChistesTematicas CT ON C.ChisteId = CT.ChisteID
-INNER JOIN Tematica T ON CT.TematicaID = T.TematicaId
-WHERE T.NombreTematica = 'humor negro' 
-
-SELECT C.ChisteID, Titulo, Cuerpo
-FROM Chiste C
-INNER JOIN ChistesTematicas CT ON C.ChisteId = CT.ChisteID
-INNER JOIN Tematica T ON CT.TematicaID = T.TematicaId
-INNER JOIN Usuario U ON C.AutorId = U.UsuarioId
-WHERE T.NombreTematica = 'humor negro' AND C.AutorID = (SELECT UsuarioID FROM Usuario WHERE Nombre = 'Manolito');
-
-
-
---SELECT C.ChisteID, Titulo, Cuerpo
---FROM Chiste C
---INNER JOIN ChistesTematicas ON C.ChisteID = ChistesTematicas.ChisteID
---INNER JOIN Tematica T ON ChistesTematicas.TematicaID = T.TematicaID
---WHERE T.NombreTematica = 'humor negro';
-
-
-
