@@ -2,7 +2,7 @@ DROP DATABASE Chistes;
 
 CREATE DATABASE Chistes;
 
-Use Chistes;
+USE Chistes;
 
 CREATE TABLE Usuario(
 	UsuarioId int PRIMARY KEY,
